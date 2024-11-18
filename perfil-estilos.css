@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff80b3, #ff4d94);
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+.header {
+    background-color: #ff4d94;
+    color: #fff;
+    padding: 1.5em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ff80b3;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.profile-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 1em;
+    gap: 2em;
+}
+
+
+.user-data {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2.5em;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-data:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-data p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.user-data p strong {
+    color: #ff4d94;
+    font-weight: bold;
+}
+
+
+.btn-primary {
+    padding: 0.9em 2.5em;
+    background: #ff4d94;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background: #e60073;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+
+@media (max-width: 768px) {
+    .user-data {
+        padding: 2em;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        padding: 0.8em 2em;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-data {
+        padding: 1.5em;
+        gap: 1em;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        padding: 0.7em 1.5em;
+        font-size: 0.9rem;
+    }
+}
+
